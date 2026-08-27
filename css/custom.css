@@ -1,0 +1,64 @@
+/* ============================================================
+   Web fonts (subsetted by the `fonts/` workflow)
+   - English / Latin  -> Amstelvar (variable serif, wght 100-900)
+   - Chinese (CJK)    -> I.MingCP (Ming/song style serif)
+   The @font-face rules come from /css/fonts.min.css which is
+   loaded in layouts/partials/head.html.
+   ============================================================ */
+body {
+  font-family: "Amstelvar", "I.MingCP", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* Headings use the handwriting-style Chinese font for a softer look */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Amstelvar", "LXGW WenKai TC", "I.MingCP", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+/* Homepage envelope (mail) icon button — centered, circular */
+.homepage-downloads {
+  text-align: center;
+}
+
+.homepage-downloads .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #111;
+  border-radius: 50%;
+  color: #111;
+  background: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.homepage-downloads .button svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Subtle feedback only when the icon is an actual link */
+.homepage-downloads a.button:hover {
+  background-color: #111;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Keep the border/icon visible in dark mode */
+@media (prefers-color-scheme: dark) {
+  .homepage-downloads .button {
+    border-color: #e5e5e5;
+    color: #e5e5e5;
+  }
+
+  .homepage-downloads a.button:hover {
+    background-color: #e5e5e5;
+    color: #111;
+  }
+}
