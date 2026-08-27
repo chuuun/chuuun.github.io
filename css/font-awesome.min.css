@@ -1,0 +1,24 @@
+/*!
+ * Font Awesome Free 6.5.2 - self-hosted subset
+ * Icons: CC BY 4.0 | Fonts: SIL OFL 1.1 | Code: MIT License
+ * https://fontawesome.com/license/free
+ *
+ * This is a MINIMAL subset of the official all.min.css, containing only the
+ * classes actually used by this site (fa-solid fa-heart fa-beat fa-lg) plus
+ * the base rules they depend on. The webfont is subsetted to a single glyph
+ * (U+F004, fa-heart) — see /webfonts/fa-solid-900.woff2 (~0.5KB).
+ *
+ * To add more icons later: extend the font subset (pyftsubset with the new
+ * unicodes) and append the matching `.fa-*:before{content:"..."}` rules from
+ * the official all.min.css.
+ */
+@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:900;font-display:block;src:url("../webfonts/fa-solid-900.woff2") format("woff2")}
+.fa{font-family:var(--fa-style-family,"Font Awesome 6 Free");font-weight:var(--fa-style,900)}
+.fa,.fa-brands,.fa-classic,.fa-regular,.fa-sharp,.fa-solid,.fab,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:var(--fa-display,inline-block);font-style:normal;font-variant:normal;line-height:1;text-rendering:auto}
+.fa-classic,.fa-regular,.fa-solid,.far,.fas{font-family:"Font Awesome 6 Free"}
+.fa-solid,.fas{font-weight:900}
+.fa-lg{font-size:1.25em;line-height:.05em;vertical-align:-.075em}
+.fa-beat{-webkit-animation-name:fa-beat;animation-name:fa-beat;-webkit-animation-delay:var(--fa-animation-delay,0s);animation-delay:var(--fa-animation-delay,0s);-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:var(--fa-animation-timing,ease-in-out);animation-timing-function:var(--fa-animation-timing,ease-in-out)}
+@-webkit-keyframes fa-beat{0%,90%{-webkit-transform:scale(1);transform:scale(1)}45%{-webkit-transform:scale(var(--fa-beat-scale,1.25));transform:scale(var(--fa-beat-scale,1.25))}}
+@keyframes fa-beat{0%,90%{-webkit-transform:scale(1);transform:scale(1)}45%{-webkit-transform:scale(var(--fa-beat-scale,1.25));transform:scale(var(--fa-beat-scale,1.25))}}
+.fa-heart:before{content:"\f004"}

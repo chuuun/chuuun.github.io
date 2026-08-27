@@ -1,9 +1,20 @@
 /*!
- * Chinese Fonts CSS - Unified Import-Based Stylesheet (Minified)
+ * Chinese Fonts CSS - Unified Stylesheet (Manifest, Minified)
  * 
- * This file imports individual minified font CSS files with their respective licenses.
+ * This file is a manifest only and contains NO @import statements on purpose:
+ * each CSS @import adds a render-blocking round trip — the browser must fetch
+ * this file before it can discover and fetch every imported font CSS. Instead,
+ * link each font CSS directly in your HTML <head> and preload it so all files
+ * are discovered immediately and fetched in parallel:
+ * 
+ *   <link rel="preload" href="/css/imingcp.min.css" as="style">
+ *   <link rel="preload" href="/css/lxgwwenkaitc.min.css" as="style">
+ *   <link rel="preload" href="/css/amstelvar.min.css" as="style">
+ *   <link rel="stylesheet" href="/css/imingcp.min.css">
+ *   <link rel="stylesheet" href="/css/lxgwwenkaitc.min.css">
+ *   <link rel="stylesheet" href="/css/amstelvar.min.css">
+ * 
  * See individual CSS files for specific font license information.
  * 
- * Generated: 2026-08-25T17:20:35.659Z
  * Generator: https://github.com/reuixiy/fonts
- */@import "./imingcp.min.css";@import "./lxgwwenkaitc.min.css";@import "./amstelvar.min.css";
+ */
